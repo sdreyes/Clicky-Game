@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Wrapper from "./components/Wrapper";
 import Image from "./components/Image";
 import Container from "./components/Container";
 import Row from "./components/Row";
+import Title from "./components/Title";
+import Nav from "./components/Nav";
 import images from "./game.json";
 
 class App extends Component {
@@ -10,7 +12,8 @@ class App extends Component {
   state = {
     images,
     clickedImages: [],
-    score: 0
+    score: 0,
+    topScore: 0
   };
 
   shuffle = () => {
@@ -36,28 +39,35 @@ class App extends Component {
     }
     else {
       this.shuffle();
-    }
-  }
+    };
+  };
 
   handleClick = id => {
     const previouslyClicked = (this.state.clickedImages.indexOf(id) > -1);
     if (previouslyClicked) {
       alert("You lost");
-      return this.resetGame();
+      if (this.state.score > this.state.topScore) {
+        this.setState({
+          topScore: this.state.score
+        }, this.resetGame());
+      }
+      else {
+        this.resetGame();
+      };
     }
     else {
       this.setState({
         score: this.state.score + 1,
         clickedImages: this.state.clickedImages.concat(id)
-      }, () => {
-        this.checkWin();
-      }) 
-    }
-  }
+      }, this.checkWin());
+    };
+  };
 
   render() {
     return (
       <Wrapper>
+        <Nav score={this.state.score} topScore={this.state.topScore}/>
+        <Title />
         <Container>
           <Row>
             {this.state.images.map(image => (
