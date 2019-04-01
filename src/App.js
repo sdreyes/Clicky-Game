@@ -1,26 +1,56 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Wrapper from "./components/Wrapper";
+import images from "./game.json";
 
 class App extends Component {
+
+  state = {
+    images,
+    clickedImages: [],
+    score: 0
+  };
+
+  shuffle = () => {
+    this.setState({
+      images: this.state.images.sort(function() {
+        return 0.5 - Math.random();
+      })
+    })
+  };
+
+  resetGame = () => {
+    this.shuffle();
+    this.setState({
+      clickedImages: [],
+      score: 0
+    })
+  }
+
+  handleClick = event => {
+    const currentImage = event.target.key;
+    const previouslyClicked = this.state.clickedImages.includes(currentImage);
+
+    if (previouslyClicked) {
+      alert("You lost");
+      this.resetGame();
+    }
+    else {
+      this.setState({
+        score: this.state.score + 1,
+        clickedImages: this.state.clickedImages.concat(currentImage)
+      })
+      if (this.state.score === this.state.images.length) {
+        alert("You win!");
+        this.resetGame();
+      }
+    }
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Wrapper>
+
+      </Wrapper>
     );
   }
 }
