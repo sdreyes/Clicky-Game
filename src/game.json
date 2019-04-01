@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "img": "%PUBLIC_URL%/img/1.jpg"
+    },
+    {
+        "id": 2,
+        "img": "%PUBLIC_URL%/img/2.jpg"
+    },
+    {
+        "id": 3,
+        "img": "%PUBLIC_URL%/img/3.jpg"
+    },
+    {
+        "id": 4,
+        "img": "%PUBLIC_URL%/img/4.jpg"
+    },
+    {
+        "id": 5,
+        "img": "%PUBLIC_URL%/img/5.jpg"
+    },
+    {
+        "id": 6,
+        "img": "%PUBLIC_URL%/img/6.jpg"
+    },
+    {
+        "id": 7,
+        "img": "%PUBLIC_URL%/img/7.jpg"
+    },
+    {
+        "id": 8,
+        "img": "%PUBLIC_URL%/img/8.jpg"
+    },
+    {
+        "id": 9,
+        "img": "%PUBLIC_URL%/img/9.jpg"
+    }
+]
