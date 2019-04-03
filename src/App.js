@@ -34,12 +34,12 @@ class App extends Component {
   };
 
   checkWin = () => {
-    console.log(this.state.score);
     if (this.state.score === this.state.images.length) {
+      this.playAudio("audio/win.mp3");
       if (this.state.score > this.state.topScore) {
         this.setState({
           topScore: this.state.score
-        }, this.resetGame("win"));
+        }, () => this.resetGame("win"));
       };
     }
     else {
@@ -47,13 +47,19 @@ class App extends Component {
     };
   };
 
+  playAudio = sound => {
+    let audio = new Audio(sound);
+    audio.play();
+  }
+
   handleClick = id => {
     const previouslyClicked = (this.state.clickedImages.indexOf(id) > -1);
     if (previouslyClicked) {
+      this.playAudio("audio/lose.mp3");
       if (this.state.score > this.state.topScore) {
         this.setState({
           topScore: this.state.score
-        }, this.resetGame("lose"));
+        }, () => this.resetGame("lose"));
       }
       else {
         this.resetGame("lose");
