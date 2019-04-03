@@ -5,6 +5,7 @@ import Container from "./components/Container";
 import Row from "./components/Row";
 import Title from "./components/Title";
 import Nav from "./components/Nav";
+import Alert from "./components/Alert";
 import images from "./game.json";
 
 class App extends Component {
@@ -29,14 +30,17 @@ class App extends Component {
       clickedImages: [],
       score: 0,
       status: status
-    })
-  }
+    });
+  };
 
   checkWin = () => {
     console.log(this.state.score);
     if (this.state.score === this.state.images.length) {
-      alert("You win!");
-      this.resetGame("You won");
+      if (this.state.score > this.state.topScore) {
+        this.setState({
+          topScore: this.state.score
+        }, this.resetGame("win"));
+      };
     }
     else {
       this.shuffle();
@@ -46,21 +50,20 @@ class App extends Component {
   handleClick = id => {
     const previouslyClicked = (this.state.clickedImages.indexOf(id) > -1);
     if (previouslyClicked) {
-      alert("You lost");
       if (this.state.score > this.state.topScore) {
         this.setState({
           topScore: this.state.score
-        }, this.resetGame("You lost"));
+        }, this.resetGame("lose"));
       }
       else {
-        this.resetGame("You lost");
+        this.resetGame("lose");
       };
     }
     else {
       this.setState({
         score: this.state.score + 1,
         clickedImages: this.state.clickedImages.concat(id),
-        status: ""
+        status: "correct"
       }, () => this.checkWin());
     };
   };
@@ -70,11 +73,13 @@ class App extends Component {
       <Wrapper>
         <Nav score={this.state.score} topScore={this.state.topScore}/>
         <Title />
+        <Alert status={this.state.status}/>
         <Container>
-          <Row>
+          <Row status={this.state.status}>
             {this.state.images.map(image => (
               <Image 
                 imageClick={this.handleClick} 
+                status={this.state.status}
                 id={image.id}
                 key={image.id}
                 image={image.img}
@@ -84,7 +89,7 @@ class App extends Component {
         </Container>
       </Wrapper>
     );
-  }
-}
+  };
+};
 
 export default App;
