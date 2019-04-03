@@ -13,22 +13,22 @@ class App extends Component {
     images,
     clickedImages: [],
     score: 0,
-    topScore: 0
+    topScore: 0,
+    status: ""
   };
 
   shuffle = () => {
     this.setState({
-      images: this.state.images.sort(function() {
-        return 0.5 - Math.random();
-      })
-    })
+      images: this.state.images.sort(() => 0.5 - Math.random())
+    });
   };
 
-  resetGame = () => {
+  resetGame = (status) => {
     this.shuffle();
     this.setState({
       clickedImages: [],
-      score: 0
+      score: 0,
+      status: status
     })
   }
 
@@ -36,7 +36,7 @@ class App extends Component {
     console.log(this.state.score);
     if (this.state.score === this.state.images.length) {
       alert("You win!");
-      this.resetGame();
+      this.resetGame("You won");
     }
     else {
       this.shuffle();
@@ -50,16 +50,17 @@ class App extends Component {
       if (this.state.score > this.state.topScore) {
         this.setState({
           topScore: this.state.score
-        }, this.resetGame());
+        }, this.resetGame("You lost"));
       }
       else {
-        this.resetGame();
+        this.resetGame("You lost");
       };
     }
     else {
       this.setState({
         score: this.state.score + 1,
-        clickedImages: this.state.clickedImages.concat(id)
+        clickedImages: this.state.clickedImages.concat(id),
+        status: ""
       }, () => this.checkWin());
     };
   };
