@@ -33,6 +33,7 @@ class App extends Component {
   }
 
   checkWin = () => {
+    console.log(this.state.score);
     if (this.state.score === this.state.images.length) {
       alert("You win!");
       this.resetGame();
@@ -59,7 +60,7 @@ class App extends Component {
       this.setState({
         score: this.state.score + 1,
         clickedImages: this.state.clickedImages.concat(id)
-      }, this.checkWin());
+      }, () => this.checkWin());
     };
   };
 
