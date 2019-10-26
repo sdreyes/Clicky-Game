@@ -1,6 +1,6 @@
 {
   "homepage": "https://sdreyes.github.io/michael-scott-game",
-  "name": "clicky-game",
+  "name": "michael-scott-game",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
