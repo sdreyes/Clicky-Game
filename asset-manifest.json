@@ -1,11 +1,11 @@
 {
-  "main.js": "/michael-scott-game/static/js/main.14d92ba8.chunk.js",
-  "main.js.map": "/michael-scott-game/static/js/main.14d92ba8.chunk.js.map",
-  "runtime~main.js": "/michael-scott-game/static/js/runtime~main.c6c818a8.js",
-  "runtime~main.js.map": "/michael-scott-game/static/js/runtime~main.c6c818a8.js.map",
-  "static/js/2.6efc73d3.chunk.js": "/michael-scott-game/static/js/2.6efc73d3.chunk.js",
-  "static/js/2.6efc73d3.chunk.js.map": "/michael-scott-game/static/js/2.6efc73d3.chunk.js.map",
-  "index.html": "/michael-scott-game/index.html",
-  "precache-manifest.7828662703b1891a7402aea6a4309085.js": "/michael-scott-game/precache-manifest.7828662703b1891a7402aea6a4309085.js",
-  "service-worker.js": "/michael-scott-game/service-worker.js"
+  "main.js": "/Michael-Scott-Game/static/js/main.14d92ba8.chunk.js",
+  "main.js.map": "/Michael-Scott-Game/static/js/main.14d92ba8.chunk.js.map",
+  "runtime~main.js": "/Michael-Scott-Game/static/js/runtime~main.1421d83c.js",
+  "runtime~main.js.map": "/Michael-Scott-Game/static/js/runtime~main.1421d83c.js.map",
+  "static/js/2.6efc73d3.chunk.js": "/Michael-Scott-Game/static/js/2.6efc73d3.chunk.js",
+  "static/js/2.6efc73d3.chunk.js.map": "/Michael-Scott-Game/static/js/2.6efc73d3.chunk.js.map",
+  "index.html": "/Michael-Scott-Game/index.html",
+  "precache-manifest.4bf3587eb66d13d48e21af4c288ebe15.js": "/Michael-Scott-Game/precache-manifest.4bf3587eb66d13d48e21af4c288ebe15.js",
+  "service-worker.js": "/Michael-Scott-Game/service-worker.js"
 }

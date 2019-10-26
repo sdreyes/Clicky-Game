@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/michael-scott-game/precache-manifest.7828662703b1891a7402aea6a4309085.js"
+  "/Michael-Scott-Game/precache-manifest.4bf3587eb66d13d48e21af4c288ebe15.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/michael-scott-game/index.html", {
+workbox.routing.registerNavigationRoute("/Michael-Scott-Game/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
