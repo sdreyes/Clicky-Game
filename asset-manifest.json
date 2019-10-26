@@ -1,11 +1,11 @@
 {
-  "main.js": "/clicky-game/static/js/main.14d92ba8.chunk.js",
-  "main.js.map": "/clicky-game/static/js/main.14d92ba8.chunk.js.map",
-  "runtime~main.js": "/clicky-game/static/js/runtime~main.27874bd3.js",
-  "runtime~main.js.map": "/clicky-game/static/js/runtime~main.27874bd3.js.map",
-  "static/js/2.6efc73d3.chunk.js": "/clicky-game/static/js/2.6efc73d3.chunk.js",
-  "static/js/2.6efc73d3.chunk.js.map": "/clicky-game/static/js/2.6efc73d3.chunk.js.map",
-  "index.html": "/clicky-game/index.html",
-  "precache-manifest.74578b83a891088acf35d1ca2fffc7dd.js": "/clicky-game/precache-manifest.74578b83a891088acf35d1ca2fffc7dd.js",
-  "service-worker.js": "/clicky-game/service-worker.js"
+  "main.js": "/michael-scott-game/static/js/main.14d92ba8.chunk.js",
+  "main.js.map": "/michael-scott-game/static/js/main.14d92ba8.chunk.js.map",
+  "runtime~main.js": "/michael-scott-game/static/js/runtime~main.c6c818a8.js",
+  "runtime~main.js.map": "/michael-scott-game/static/js/runtime~main.c6c818a8.js.map",
+  "static/js/2.6efc73d3.chunk.js": "/michael-scott-game/static/js/2.6efc73d3.chunk.js",
+  "static/js/2.6efc73d3.chunk.js.map": "/michael-scott-game/static/js/2.6efc73d3.chunk.js.map",
+  "index.html": "/michael-scott-game/index.html",
+  "precache-manifest.7828662703b1891a7402aea6a4309085.js": "/michael-scott-game/precache-manifest.7828662703b1891a7402aea6a4309085.js",
+  "service-worker.js": "/michael-scott-game/service-worker.js"
 }
