@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Michael-Scott-Game/precache-manifest.4bf3587eb66d13d48e21af4c288ebe15.js"
+  "/Michael-Scott-Game/precache-manifest.f72f99328673dabb6e51b0d736dcf1d1.js"
 );
 
 workbox.clientsClaim();
